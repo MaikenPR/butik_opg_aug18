@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+    margin: auto;
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper{
+    max-width: 900px;
+    height: auto;
+    border: 3px solid grey;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* padding: 20px; */
+    /* position: relative; */
+}
+.container{
+    padding: 0px !important;
+}
+
+.nav>li>a{
+    font-size: 12px;
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+header{
+    height: auto;
+    width: auto;
+}
+
+header img{
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+
+main{
+    height: auto;
+    /* border: 2px solid grey; */
+}
+
+main:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.hl{
+    border-top: 3px solid #EDEDED;
+}
+
+.vl{
+    border-right: 3px solid #EDEDED;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    margin-left: 3px;
+    top: 0px;
+}
+
+h1, h2{
+    font-size: 12px;
+    font-weight: bold;
+    color: #FF9E41;
+}
+
+#forside_img{
+    height: 204px;
+    width: 268px;
+    margin-bottom: 20px;
+}
+
+#forside_text{
+    font-size: 10px;
+    padding-top: 20px;
+}
+
+/* TILBUD */
+/* aside{
+    margin-bottom: 30px;
+} */
+
+
+#tilbud_div{
+    text-align: center;
+    border: 1px solid rgb(214, 211, 211);
+    margin: 15px;
+    height: auto;
+}
+
+#tilbud_img{
+    height: 48px;
+    width: 69px;
+    padding: 5px;
+}
+
+#tilbud_pris{
+    text-decoration: line-through;
+    padding-top: 2px;
+}
+
+#tilbudspris{
+    color: red;
+}
+
+.tilbud_p{
+    font-size: 10px;
+    line-height: 0%;
+    /* padding-top: 5px; */
+    padding-bottom: 3px;
+}
+
+h3{
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 3px;
+}
+
+#cykel_kategori{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#cyk_kat_img{
+    height: 80px;
+    width: 116px;
+}
+
+#cykel_typer{
+    margin-top: 50px;
+}
+
+.cykel_article{
+    border: 2px solid #EDEDED;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.cykel_article:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cykel_article div p{
+    padding: 0;
+    font-size: 10px;
+}
+
+.cykel_article div a{
+    text-align: end;
+    color: #FF9E41;
+    text-decoration-line: underline;
+    font-size: 10px;
+}
+
+.cykel_article h3{
+    color: #FF9E41;
+}
+
+.cykelList_img{
+    height: 80px;
+    width: 116px;
+}
+
+footer{
+    /* max-height: 25px; */
+    width: auto;
+    text-align: center;
+    color: #A4A4A4;
+    background-color: #C9CACC;
+    /* position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; */
+    border-top: 2px solid grey;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+/*=======================ADMIN STYLING====================================*/
+
+.admin_h1{
+    font-size: 30px;
+    color: rgb(172, 87, 7);
+    text-decoration-line: underline;
+    margin-left: 20px;
+}
+
+.admin_h2{
+    font-size: 20px;
+    color: rgb(196, 124, 58);
+    margin-left: 20px;
+}
+
+#admin_tilbud_div{
+    border: 1px solid rgb(214, 211, 211);
+    margin: 15px;
+    height: auto;
+}
+
+#cykel_img{
+    height: 80px;
+    width: 116px;
+}
+
+#cykel_div{
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+p span{
+    font-weight: 700;
+}
+
+.ret{
+    background-color: #EDEDED;
+    padding: 5px;
+    color: black;
+    border: 2px solid orange;
+}
+
+.ret:hover{
+    background-color: orange;
+    color: white;
+    border: 2px solid orange;
+}
+
+.slet{
+    background-color: #EDEDED;
+    padding: 5px;
+    color: black;
+    border: 2px solid red;
+}
+
+.slet:hover{
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+}
+
+#opretCykel{
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#retCykel{
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#retcykel_img{
+    height: 80px;
+    width: 116px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

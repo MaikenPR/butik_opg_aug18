@@ -1,0 +1,30 @@
+{
+  "name": "butik_opg_aug18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.17.5",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "express-session": "^1.15.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaikenPR/butik_opg_aug18.git"
+  },
+  "author": "Maiken P. Rais",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaikenPR/butik_opg_aug18/issues"
+  },
+  "homepage": "https://github.com/MaikenPR/butik_opg_aug18#readme"
+}

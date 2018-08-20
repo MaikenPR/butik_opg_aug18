@@ -1,0 +1,34 @@
+<!-- DETTE ER ET TEST VIEW -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+        </header>
+
+        <main>
+
+            <h1>Fiskesiden</h1>
+
+            <p><%= id %></p>
+            <!-- skal der udskrives noget fra databasen skal p-tagget indeholde 'enCykel.model' fx indeni procenttegnene
+            Selvfølgelig skal routet også indeholde de rigtige facts - SE FISK-routet!
+        
+            Hvis jeg ville have udskrevet andre ting en model, skriver jeg fx beskrivelse eller pris i stedet for model, så
+            fremt funktionen der laver databasekaldet i servicen selecter disse. -->
+
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+
+
+</html>

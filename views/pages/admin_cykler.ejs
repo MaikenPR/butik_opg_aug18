@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+
+            <% include ../partials/admin_nav_partials.ejs %>
+        </header>
+
+        <main>
+
+            <h1 class="admin_h1">Cykler</h1>
+
+            <h2 class="admin_h2">Opret cykel</h2>
+
+            <form id="opretCykel" method="post" action="/admin_cykler/opret">
+                <div class="form__inputGroup">
+                    <label for="opret_cykelBrand" class="input__label">Mærke</label>
+                    <select name="brand" id="cykel_brand">
+                        <option value="">Vælg mærke</option>
+                        <% for(let i = 0; i < brand.length; i++){ %>
+                            <option value="<%= brand[i].id %>">
+                                <%= brand[i].navn %>
+                            </option>
+                            <%}%>
+                    </select>
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_cykelBillede" class="input__label">Billede</label>
+                    <input type="file" name="billede" accept="image/*">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_cykelModel">Model</label>
+                    <input type="text" name="model" id="cykel_model" class="input__field">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_cykelBeskrivelse">Beskrivelse</label>
+                    <textarea type="" name="beskrivelse" id="cykel_beskrivelse" class="input__field"></textarea>
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_cykelpris">Pris</label>
+                    <input type="text" name="pris" id="cykel_pris" class="input__field">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_kategori">Kategori</label>
+                    <select name="kategori" id="cykel_kategori">
+                        <option value="">Vælg kategori</option>
+                        <% for(let i = 0; i < cykel_kat.length; i++){ %>
+                            <option value="<%= cykel_kat[i].id %>">
+                                <%= cykel_kat[i].navn %>
+                            </option>
+                            <%}%>
+                    </select>
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_cykeltilbudspris">Tilbudspris</label>
+                    <input type="text" name="tilbudspris" id="cykel_tilbudspris" class="input__field">
+                    <p>OBS! Skal produktet være på tilbud, indtast da en pris i feltet. Er det ikke et tilbud, lad feltet være
+                        tomt
+                    </p>
+                </div>
+                <button type="submit" onclick="return alert('Cyklen blev oprettet')">Opret cykel</button>
+            </form>
+
+
+
+            <% for(let i = 0; i < alleCykler.length; i++){ %>
+                <div id="cykel_div">
+                    <h2 class="admin_h2">
+                        <%= alleCykler[i].brand %>
+                            <%= alleCykler[i].model %>
+                    </h2>
+                    <img id="cykel_img" src="/images/Cykler/<%= alleCykler[i].billede%>" alt="">
+                    <p>
+                        <%= alleCykler[i].beskrivelse %>
+                    </p>
+                    <p>
+                        <span>Pris:</span>
+                        <%= alleCykler[i].pris %> kr.</p>
+                    <p>
+                        <span>Kategori:</span>
+                        <%= alleCykler[i].kategori %>
+                    </p>
+                    <a href="/admin_retCykel/<%= alleCykler[i].id %>" class="btn btn-primary ret">RET</a>
+                    <a href="/admin_cykler/delete/<%= alleCykler[i].id %>" onclick="return minConfirmSlet('Er du sikker på du vil slette?', 'Cyklen er slettet')" class="btn btn-primary slet">SLET</a>
+                </div>
+                <%}%>
+
+
+
+        </main>
+        <footer>
+        </footer>
+    </div>
+
+    <!-- <script>
+        function minConfirmSlet() {
+
+            if (confirm('Er du sikker på du vil slette?')) {
+                alert('Cyklen er slettet');
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script> -->
+</body>
+
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+
+            <% include ../partials/navigation_partials.ejs %>
+        </header>
+
+        <main>
+
+            <h1 class="col-md-9">Cykler</h1>
+            <h2 class="col-md-3">Tilbud</h2>
+            <article class="col-md-9">
+                <% include ../partials/main_content_hl.ejs %>
+                
+                        
+                            <article class="cykel_article">
+                                    <div class="col-md-9">
+                                        <h3> <%= etProdukt.navn %> </h3>
+                                        <p> <%= etProdukt.beskrivelse %> </p>
+                                        <p class="col-md-6">Pris: <%= etProdukt.pris %> kr.</p>
+                                      
+                                    </div>
+                                    <img class="cykelList_img" class="col-md-3" src="/images/<%= etProdukt.kategori %>/<%= etProdukt.billede %>" alt="">
+                                </article>
+                            
+            </article>
+
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+
+
+</html>

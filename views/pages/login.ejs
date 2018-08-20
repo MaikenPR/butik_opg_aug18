@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+            <% include ../partials/navigation_partials.ejs %>
+        </header>
+
+        <main>
+            <h1>Login</h1>
+            <form method="post">
+                <div class="form__inputGroup">
+                    <label for="login__username" class="input__label">Username</label>
+                    <input type="text" name="username" id="login__username" class="input__field" placeholder="you@email.com" required>
+                </div>
+                <div class="form__inputGroup">
+                    <label for="login__password" class="input__label">Password</label>
+                    <input type="password" name="password" id="login__password" class="input__field" placeholder="Your secret password" required>
+                </div>
+                <button type="submit">Log in <span class="icon-login"></span></button>
+            </form>
+        </main>
+        <footer>
+        </footer>
+    </div>
+</body>
+
+
+</html>
