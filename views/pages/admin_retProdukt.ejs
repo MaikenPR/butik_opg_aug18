@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+
+            <% include ../partials/admin_nav_partials.ejs %>
+        </header>
+
+        <main>
+
+            <h1 class="admin_h1">Produkter</h1>
+
+            <h2 class="admin_h2">Ret Produkt</h2>
+
+            <form id="retProdukt" method="POST" action="/admin_retProdukt/update/<%= etProdukt.id %>">
+                <div class="form__inputGroup">
+                    <label for="update_produktBrand" class="input__label">Brand</label>
+                    <select name="brand" id="produkt_brand">
+                        <option value="">
+                           Vælg Brand
+                        </option>
+                        <% for(let i = 0; i < brand.length; i++){ %>
+                            <option value="<%= brand[i].id %>">
+                                <%= brand[i].navn %>
+                            </option>
+                            <%}%>
+                    </select>
+                </div>
+                <div class="form__inputGroup">
+                    <img id="retProdukt_img" src="/images/<%= etProdukt.kategori %>/<%= etProdukt.billede %>" alt="">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="update_produktNavn">Navn</label>
+                    <input type="text" name="navn" id="produkt_navn" class="input__field" value="<%= etProdukt.navn %>">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="update_produktBeskrivelse">Beskrivelse</label>
+                    <textarea type="" name="beskrivelse" id="produkt_beskrivelse" class="input__field"><%= etProdukt.beskrivelse %></textarea>
+                </div>
+                <div class="form__inputGroup">
+                    <label for="update_produktPris">Pris</label>
+                    <input type="text" name="pris" id="produkt_pris" class="input__field" value="<%= etProdukt.pris %>">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="update_kategori">Kategori</label>
+                    <select name="kategori" id="produkt_kategori">
+                        <option>
+                            Vælg kategori
+                        </option>
+                        <% for(let i = 0; i < kategorier.length; i++){ %>
+                            <option value="<%= kategorier[i].id %>">
+                                <%= kategorier[i].navn %>
+                            </option>
+                            <%}%>
+                    </select>
+                </div>
+                <button type="submit" onclick="return minConfirmSlet('Er du sikker på du vil rette?', 'Dine ændringer er blevet gemt')">Gem</button>
+            </form>
+
+        </main>
+        <footer>
+        </footer>
+    </div>
+
+    <script>
+        /*Get select object*/
+        
+        /*Dette gør at når jeg skal ind og rette et produkt udfyldes fælterne brand og kategori med den 
+        value som produktet allerede har.*/
+        var objSelect = document.getElementById("produkt_brand");
+        setSelectedValue(objSelect, "<%= etProdukt.fk_brand %>");
+
+        var objSelect = document.getElementById("produkt_kategori");
+        setSelectedValue(objSelect, "<%= etProdukt.fk_kategori %>");
+        console.log(objSelect);
+
+        //Set selected
+        function setSelectedValue(selectObj, valueToSet) {
+            for (var i = 0; i < selectObj.options.length; i++) {
+                if (selectObj.options[i].value == valueToSet) {
+                    selectObj.options[i].selected = true;
+                    return;
+                };
+            };
+        };
+    </script>
+</body>
+
+
+</html>

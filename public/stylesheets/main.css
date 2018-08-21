@@ -85,41 +85,6 @@ h1, h2{
     padding-top: 20px;
 }
 
-/* TILBUD */
-/* aside{
-    margin-bottom: 30px;
-} */
-
-
-#tilbud_div{
-    text-align: center;
-    border: 1px solid rgb(214, 211, 211);
-    margin: 15px;
-    height: auto;
-}
-
-#tilbud_img{
-    height: 48px;
-    width: 69px;
-    padding: 5px;
-}
-
-#tilbud_pris{
-    text-decoration: line-through;
-    padding-top: 2px;
-}
-
-#tilbudspris{
-    color: red;
-}
-
-.tilbud_p{
-    font-size: 10px;
-    line-height: 0%;
-    /* padding-top: 5px; */
-    padding-bottom: 3px;
-}
-
 h3{
     font-size: 12px;
     font-weight: bold;
@@ -129,49 +94,49 @@ h3{
     padding-top: 3px;
 }
 
-#cykel_kategori{
+#produkt_kategori{
     padding-right: 20px;
     padding-left: 20px;
 }
 
-#cyk_kat_img{
+#prod_kat_img{
     height: 80px;
     width: 116px;
 }
 
-#cykel_typer{
+#produkt_typer{
     margin-top: 50px;
 }
 
-.cykel_article{
+.produkt_article{
     border: 2px solid #EDEDED;
     margin-top: 20px;
     padding-top: 10px;
 }
 
-.cykel_article:after {
+.produkt_article:after {
     content: "";
     clear: both;
     display: table;
 }
 
-.cykel_article div p{
+.produkt_article div p{
     padding: 0;
     font-size: 10px;
 }
 
-.cykel_article div a{
+.produkt_article div a{
     text-align: end;
     color: #FF9E41;
     text-decoration-line: underline;
     font-size: 10px;
 }
 
-.cykel_article h3{
+.produkt_article h3{
     color: #FF9E41;
 }
 
-.cykelList_img{
+.produktList_img{
     height: 80px;
     width: 116px;
 }
@@ -217,12 +182,12 @@ footer p {
     height: auto;
 }
 
-#cykel_img{
+#produkt_img{
     height: 80px;
     width: 116px;
 }
 
-#cykel_div{
+#produkt_div{
     border: 1px solid black;
     margin-left: 20px;
     margin-right: 20px;
@@ -260,21 +225,21 @@ p span{
     border: 2px solid red;
 }
 
-#opretCykel{
+#opretProdukt{
     border: 1px solid black;
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
 }
 
-#retCykel{
+#retProdukt{
     border: 1px solid black;
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
 }
 
-#retcykel_img{
+#retProdukt_img{
     height: 80px;
     width: 116px;
     margin-top: 5px;

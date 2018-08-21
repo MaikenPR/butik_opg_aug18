@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+
+            <% include ../partials/admin_nav_partials.ejs %>
+        </header>
+
+        <main>
+
+            <h1 class="admin_h1">Produkter</h1>
+
+            <h2 class="admin_h2">Opret produkt</h2>
+
+            <form id="opretProdukt" method="post" action="/admin_produkter/opret">
+                <div class="form__inputGroup">
+                    <label for="opret_produktBrand" class="input__label">Brand</label>
+                    <select name="brand" id="produkt_brand">
+                        <option value="">Vælg brand</option>
+                        <% for(let i = 0; i < brand.length; i++){ %>
+                            <option value="<%= brand[i].id %>">
+                                <%= brand[i].navn %>
+                            </option>
+                            <%}%>
+                    </select>
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_produktBillede" class="input__label">Billede</label>
+                    <input type="file" name="billede" accept="image/*">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_produktNavn">Navn</label>
+                    <input type="text" name="navn" id="produkt_navn" class="input__field">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_produktBeskrivelse">Beskrivelse</label>
+                    <textarea type="" name="beskrivelse" id="produkt_beskrivelse" class="input__field"></textarea>
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_produktPris">Pris</label>
+                    <input type="text" name="pris" id="produkt_pris" class="input__field">
+                </div>
+                <div class="form__inputGroup">
+                    <label for="opret_kategori">Kategori</label>
+                    <select name="kategori" id="produkt_kategori">
+                        <option value="">Vælg kategori</option>
+                        <% for(let i = 0; i < kategorier.length; i++){ %>
+                            <option value="<%= kategorier[i].id %>">
+                                <%= kategorier[i].navn %>
+                            </option>
+                            <%}%>
+                    </select>
+                </div>
+                <button type="submit" onclick="return alert('Produktet blev oprettet')">Opret produkt</button>
+            </form>
+
+
+
+            <% for(let i = 0; i < produkter.length; i++){ %>
+                <div id="produkt_div">
+                    <h2 class="admin_h2">
+                        <%= produkter[i].brand %>
+                            <%= produkter[i].navn %>
+                    </h2>
+                    <img id="produkt_img" src="/images/<%= produkter[i].kategori + '/' + produkter[i].billede%>" alt="">
+                    <p>
+                        <%= produkter[i].beskrivelse %>
+                    </p>
+                    <p>
+                        <span>Pris:</span>
+                        <%= produkter[i].pris %> kr.</p>
+                    <p>
+                        <span>Kategori:</span>
+                        <%= produkter[i].kategori %>
+                    </p>
+                    <a href="/admin_retProdukt/<%= produkter[i].id %>" class="btn btn-primary ret">RET</a>
+                    <a href="/admin_produkter/delete/<%= produkter[i].id %>" onclick="return minConfirmSlet('Er du sikker på du vil slette?', 'Produktet er slettet')" class="btn btn-primary slet">SLET</a>
+                </div>
+                <%}%>
+
+
+
+        </main>
+        <footer>
+        </footer>
+    </div>
+
+    <!-- <script>
+        function minConfirmSlet() {
+
+            if (confirm('Er du sikker på du vil slette?')) {
+                alert('Produktet er slettet');
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script> -->
+</body>
+
+
+</html>

@@ -49,19 +49,19 @@ Produkter.getAll = function () {
 }
 
 //UPDATE
-Produkter.updateOne = function (id, brand, beskrivelse, pris, kategori, tilbudspris) {
+Produkter.updateOne = function (id, navn, brand, beskrivelse, pris, kategori) {
     return new Promise((resolve, reject) => {
+        console.log(id);
         db.execute(`
         UPDATE produkt 
         SET
             produkt.navn = ?,
             produkt.beskrivelse = ?,
             produkt.pris = ?,
-            produkt.billede = ?,
             produkt.fk_kategori = ?,
             produkt.fk_brand = ?
         WHERE id = ?
-        `, [navn, beskrivelse, pris, billede, kategori, brand, id ], (error, result) => { 
+        `, [navn, beskrivelse, pris, kategori, brand, id ], (error, result) => { 
             /*:: HUSK FOR CHRIST SAKE at rækkefølgen i sql-kaldet skal være den samme som i sql'en.
             Fx havde jeg skrevet id før brand, så når kaldet når til WHERE id = ? har den ikke kunne finde
             noget fordi den tager det i den samme rækkefølge. Så id, til sidst så den passer på hvor id'ets sprøgsmålstegn er
@@ -71,7 +71,7 @@ Produkter.updateOne = function (id, brand, beskrivelse, pris, kategori, tilbudsp
                     console.log(error);
                     reject(error)
                 };
-                resolve();
+                resolve(true); //true henviser til variablen let status i admin_retProdukt.js under UPDATE
             });
     });
 };
@@ -127,6 +127,7 @@ Produkter.getOneById = function (id) {
         SELECT 
             produkt.id,
             brand.navn AS brand,
+            produkt.navn,
             produkt.fk_brand,
             produkt.billede,
             produkt.beskrivelse,

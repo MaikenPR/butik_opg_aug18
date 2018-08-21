@@ -14,20 +14,19 @@
 
         <main>
 
-            <h1 class="col-md-9">Cykler</h1>
-            <h2 class="col-md-3">Tilbud</h2>
+            <h1 class="col-md-9">Produkter</h1>
             <article class="col-md-9">
                 <% include ../partials/main_content_hl.ejs %>
                 
                         
-                            <article class="cykel_article">
+                            <article class="produkt_article">
                                     <div class="col-md-9">
                                         <h3> <%= etProdukt.navn %> </h3>
                                         <p> <%= etProdukt.beskrivelse %> </p>
                                         <p class="col-md-6">Pris: <%= etProdukt.pris %> kr.</p>
                                       
                                     </div>
-                                    <img class="cykelList_img" class="col-md-3" src="/images/<%= etProdukt.kategori %>/<%= etProdukt.billede %>" alt="">
+                                    <img class="produktList_img" class="col-md-3" src="/images/<%= etProdukt.kategori %>/<%= etProdukt.billede %>" alt="">
                                 </article>
                             
             </article>
