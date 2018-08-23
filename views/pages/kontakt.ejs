@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+
+            <% include ../partials/navigation_partials.ejs %>
+        </header>
+
+        <main>
+
+            <article>
+                <div class="container">
+
+                    <div class="form-sec">
+                        <h4>Kontakt os her</h4>
+
+                        <form name="qryform" id="qryform" method="post" action="/kontaktForm">
+                            <div class="form-group">
+                                <label>Navn:</label>
+                                <input type="text" class="form-control" id="navn" placeholder="Indtast Navn" name="navn">
+                                <br>
+                                <small id="errNavnTxt" class="form-text text-muted attention"></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Indtast Email" name="email">
+                                <br>
+                                <small id="errEmailTxt" class="form-text text-muted attention"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Telefon nr.:</label>
+                                <input type="text" class="form-control" id="telefon" placeholder="Indtast Telefon nr." name="telefon">
+                                <br>
+                                <small id="errTlfTxt" class="form-text text-muted attention"></small>
+                            </div>
+                            <div class="form-group">
+                                <label>Emne:</label>
+                                <input type="text" class="form-control" id="emne" placeholder="Indtast Emne" name="emne">
+                                <br>
+                                <small id="errEmneTxt" class="form-text text-muted attention"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Besked:</label>
+                                <textarea name="besked" class="form-control" id="besked" placeholder="Skriv din besked her"></textarea>
+                                <br>
+                                <small id="errBeskedTxt" class="form-text text-muted attention"></small>
+                            </div>
+
+                            <button type="submit" id="send" class="btn btn-default">Send</button>
+                            <br>
+                            <small id="success" class="form-text text-muted attention"><%= successMessage %></small>
+                        </form>
+                    </div>
+
+
+                </div>
+            </article>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+
+<script src="js/validate.js"></script>
+
+</html>

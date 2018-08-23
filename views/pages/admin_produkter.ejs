@@ -21,6 +21,7 @@
             <form id="opretProdukt" method="post" action="/admin_produkter/opret">
                 <div class="form__inputGroup">
                     <label for="opret_produktBrand" class="input__label">Brand</label>
+                    <br>
                     <select name="brand" id="produkt_brand">
                         <option value="">Vælg brand</option>
                         <% for(let i = 0; i < brand.length; i++){ %>
@@ -32,22 +33,27 @@
                 </div>
                 <div class="form__inputGroup">
                     <label for="opret_produktBillede" class="input__label">Billede</label>
+                    <br>
                     <input type="file" name="billede" accept="image/*">
                 </div>
                 <div class="form__inputGroup">
                     <label for="opret_produktNavn">Navn</label>
+                    <br>
                     <input type="text" name="navn" id="produkt_navn" class="input__field">
                 </div>
                 <div class="form__inputGroup">
                     <label for="opret_produktBeskrivelse">Beskrivelse</label>
+                    <br>
                     <textarea type="" name="beskrivelse" id="produkt_beskrivelse" class="input__field"></textarea>
                 </div>
                 <div class="form__inputGroup">
                     <label for="opret_produktPris">Pris</label>
+                    <br>
                     <input type="text" name="pris" id="produkt_pris" class="input__field">
                 </div>
                 <div class="form__inputGroup">
                     <label for="opret_kategori">Kategori</label>
+                    <br>
                     <select name="kategori" id="produkt_kategori">
                         <option value="">Vælg kategori</option>
                         <% for(let i = 0; i < kategorier.length; i++){ %>

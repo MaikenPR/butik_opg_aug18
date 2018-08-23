@@ -5,5 +5,10 @@ function minConfirmSlet(question, message) {
         return true;
     } else {
         return false;
-    }
-}
+    };
+};
+
+// function successMessage(message){
+//     document.querySelector('#success').innerHTML = message;
+
+// };
