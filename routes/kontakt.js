@@ -8,6 +8,7 @@ module.exports = function (app) {
             res.render('pages/kontakt', {
                 'page': { 'title': 'Kontakt' },
                 'successMessage': ""
+                // 'test': "TESTER LIGE DEN HER uden indhold"
             });
         } catch (error) {
             res.send(error);
@@ -27,6 +28,7 @@ module.exports = function (app) {
             res.render('pages/kontakt', {
                 'page': { 'title': 'Kontakt' },
                 'successMessage': "Tak for din besked"
+                // 'test': "Dette er en test"
             });
         } else {
             res.send('Der skete en fejl');
