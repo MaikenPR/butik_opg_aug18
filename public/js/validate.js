@@ -69,7 +69,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
             let request = new Request('/kontaktForm', init);
 
             fetch(request)
-                .then(response => { console.log(response) }).catch(err => {
+                .then(response => {
+                    console.log(response) 
+                    return response.json();
+                })
+                .then(data => {
+                    // console.log(data);
+                    console.log(data.successMessage);
+                    document.querySelector('#success').innerHTML = data.successMessage;
+                    document.querySelector('.kontaktForm').style.display = "none";
+
+                })
+                .catch(err => {
                     alert("STOP!");
                     console.log(err)
                 });

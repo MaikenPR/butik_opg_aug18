@@ -25,8 +25,8 @@ module.exports = function (app) {
             req.body.besked
         ); /*Rækkefølgen på req.body.NOGET skal være den samme som angivet i servicens funktionsparametre */
         if (result === true) {
-            res.render('pages/kontakt', {
-                'page': { 'title': 'Kontakt' },
+            res.json(
+                {
                 'successMessage': "Tak for din besked"
                 // 'test': "Dette er en test"
             });

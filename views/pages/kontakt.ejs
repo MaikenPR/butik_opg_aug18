@@ -21,7 +21,7 @@
                     <div class="form-sec">
                         <h4>Kontakt os her</h4>
 
-                        <form name="qryform" id="qryform" method="post" action="/kontaktForm">
+                        <form name="qryform" id="qryform" class="kontaktForm" method="post" action="/kontaktForm">
                             <div class="form-group">
                                 <label>Navn:</label>
                                 <input type="text" class="form-control" id="navn" placeholder="Indtast Navn" name="navn">
@@ -57,8 +57,8 @@
 
                             <button type="submit" id="send" class="btn btn-default">Send</button>
                             <br>
-                            <small id="success" class="form-text text-muted attention"><%= successMessage %></small>
                         </form>
+                        <small id="success" class="form-text text-muted attention"></small>
                     </div>
 
 
