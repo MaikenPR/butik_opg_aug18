@@ -18,7 +18,7 @@
 
             <h2 class="admin_h2">Opret produkt</h2>
 
-            <form id="opretProdukt" method="post" action="/admin_produkter/opret">
+            <form id="opretProdukt" method="post" action="/admin_produkter/opret" enctype="multipart/form-data">
                 <div class="form__inputGroup">
                     <label for="opret_produktBrand" class="input__label">Brand</label>
                     <br>
@@ -34,7 +34,7 @@
                 <div class="form__inputGroup">
                     <label for="opret_produktBillede" class="input__label">Billede</label>
                     <br>
-                    <input type="file" name="billede" accept="image/*">
+                    <input type="file" name="billedeFil" id="upload__image">
                 </div>
                 <div class="form__inputGroup">
                     <label for="opret_produktNavn">Navn</label>

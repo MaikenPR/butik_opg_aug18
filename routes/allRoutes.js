@@ -7,4 +7,5 @@ module.exports = function (app){
     require('./login')(app);
     require('./kontakt')(app);
     require('./search')(app);
+    require('./fileupload')(app);
 };
