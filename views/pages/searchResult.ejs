@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head_partials.ejs %>
+</head>
+
+<body>
+    <div id="wrapper" class="container">
+        <header>
+
+            <% include ../partials/navigation_partials.ejs %>
+        </header>
+
+        <main>
+
+            <h1 class="col-md-9">Søgeresultat</h1>
+            <article class="col-md-9">
+                <% include ../partials/main_content_hl.ejs %>
+
+                    <% if(typeof produkter != 'undefined'){ %>
+                        <% for(let i = 0; i < produkter.length; i++){ %>
+                            <a href="/produkter/<%= produkter[i].id %>">
+                                <div class="col-md-4" id="produkt_typer">
+                                    <h3>
+                                        <%= produkter[i].navn %>
+                                    </h3>
+                                    <img id="prod_kat_img" src="/images/<%= produkter[i].kategori + '/' + produkter[i].billede %>" alt="">
+                                </div>
+                            </a>
+                        <% } %>
+                    <% } %>
+
+                
+
+            </article>
+
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+
+</html>

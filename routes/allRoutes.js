@@ -6,4 +6,5 @@ module.exports = function (app){
     require('./admin_retProdukt')(app);
     require('./login')(app);
     require('./kontakt')(app);
+    require('./search')(app);
 };
