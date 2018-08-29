@@ -34,6 +34,21 @@ body{
     margin-bottom: 0px;
 }
 
+#navSearch{
+    margin-top: 13px;
+    float: right;
+}
+#avanSearchParent{
+    float: right;
+    padding-top: 14px;
+    margin-left: 10px;
+}
+
+#avanSearch{
+    color: #FF9E41;
+    font-size: 12px;
+}
+
 header{
     height: auto;
     width: auto;

@@ -18,6 +18,14 @@
             <article class="col-md-9">
                 <% include ../partials/main_content_hl.ejs %>
 
+                    <form id='formSearch' method="POST" action="/search">
+                        Fritekst <input type="text" class="txt" name="txt"> Pris
+                        <input type="text" class="pris" name="pris"><br> Kategorier: Lamper <input type="checkbox" name="kategori"
+                            value="1"> Sofaer
+                        <input type="checkbox" name="kategori" value="2"> Tilbehør <input type="checkbox" name="kategori" value="3">
+                        <input type="submit" class="submit" name="subnit" value="søg">
+                    </form>
+
                     <% if(typeof produkter != 'undefined'){ %>
                         <% for(let i = 0; i < produkter.length; i++){ %>
                             <a href="/produkter/<%= produkter[i].id %>">
@@ -26,12 +34,13 @@
                                         <%= produkter[i].navn %>
                                     </h3>
                                     <img id="prod_kat_img" src="/images/<%= produkter[i].kategori + '/' + produkter[i].billede %>" alt="">
+                                    <p><%= produkter[i].pris %> kr.</p>
                                 </div>
                             </a>
-                        <% } %>
-                    <% } %>
+                            <% } %>
+                                <% } %>
 
-                
+
 
             </article>
 

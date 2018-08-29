@@ -23,10 +23,12 @@
                 </li>
             </ul>
         </div>
+        <div id="avanSearchParent" class="col-md-4x"> <a id="avanSearch" href="../search">Avanceret søgning</a></div>
+        <form id="navSearch" method="POST" action="/search" class="col-md-4x">
+            <input type="text" class="txt" name="txt">
+            <input type="submit" class="submit" name="submit" value="søg">
+        </form>
     </div>
+    
 </nav>
 
-<form id="searchForm" method="POST" action="/search">
-    <input type="text" class="txt" name="txt">
-    <input type="submit" class="submit" name="submit" value="søg">
-</form>
