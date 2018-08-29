@@ -1,3 +1,8 @@
+
+/* OBS!! Denne fil bliver ikke brugt i selve projektet - den var til at teste med! */
+
+
+
 const path = require('path');
 
 module.exports = (app) => {

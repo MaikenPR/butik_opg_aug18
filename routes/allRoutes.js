@@ -7,5 +7,5 @@ module.exports = function (app){
     require('./login')(app);
     require('./kontakt')(app);
     require('./search')(app);
-    require('./fileupload')(app);
+    // require('./fileupload')(app); /* OBS!! Denne route bliver ikke brugt i selve projektet - den var til at teste med! */
 };
